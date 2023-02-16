@@ -1,0 +1,117 @@
+.botao {
+  margin: 32px;
+  width: 150px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(31, 33, 146);
+  font-size: .8em;
+  font-weight: 600;
+  border: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-city form {
+  background: #eee;
+
+  border: none;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+  margin: .5rem;
+
+}
+
+.search-city form label {
+  font-weight: bold;
+  display: flex;
+}
+
+.search-city form .input {
+  border: none;
+  height: 24px;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0 2rem;
+  width: 70%;
+}
+
+.search-result {
+  background: #eee;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 0px;
+  width: 80%;
+  margin: .5rem;
+}
+
+ul {
+  list-style:none;
+  margin:0;
+}
+
+li {
+  border-bottom:1px solid #fff;
+  padding:4px;
+  margin:2px;
+  color: #444;
+  display:block;
+  border-bottom:1px solid #666;
+  text-decoration:none;
+  padding: .3em .25em;
+}
+
+h1 {
+  color:#000;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.musics {
+	float:left;
+	margin:0;
+	padding:0;
+}
+
+.musics ul {
+	margin:0;
+	padding:0;
+}
+
+.musics li {
+  float:left;
+  width: 30%;
+  height: 60%;
+}
+
+
+.botao-delete {
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 10px;
+  align-self: end;
+}
+
+img {
+  width: 24px;
+}
+
+p {
+  text-align: center;
+ line-height: 100px;
+
+ }

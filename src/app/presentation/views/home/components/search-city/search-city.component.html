@@ -1,0 +1,55 @@
+<div class="row">
+
+  <section class="search-result">
+    <div *ngIf="this.savedService.currentCity.city.length > 0, else noDataCity">
+      <header>
+        <h2>A vibe de {{ this.savedService.currentCity.city }} dia {{ this.savedService.currentCity.date }}</h2>
+      </header>
+
+      <div>
+        Temperatura no dia {{ this.savedService.currentCity.temperature }} °C <br>
+        Vibe/Gênero recomendado: {{ this.savedService.currentCity.genrer }} <br>
+        Músicas para escutar em {{ this.savedService.currentCity.city }} {{ this.savedService.currentCity.date }}:
+      </div>
+
+      <div class="musics">
+        <ul>
+          <li *ngFor="let track of this.savedService.currentCity.tracks"><a>{{ track.data.name }}</a></li>
+        </ul>
+      </div>
+
+      <button *ngIf="this.savedService.currentCity.tracks.length > 0" (click)="saveNew()" class="botao-delete">
+        <img src="/assets/save.png" alt="Excluir">
+      </button>
+    </div>
+
+  </section>
+
+  <section class="search-city">
+    <form>
+      <label for="cidade">Cidade</label>
+      <input type="text" class="input" id="cidade" name="cidade" placeholder="Digite o cidade"
+        [(ngModel)]="cityForm.nome">
+      <div class="row-input">
+        <div>
+          <label for="lat">Latitude</label>
+          <input type="text" class="input" id="lat" name="lat" placeholder="Latitude"
+            [(ngModel)]="cityForm.lat">
+        </div>
+        <div>
+          <label for="lng">Longitude</label>
+          <input type="text" class="input" id="lng" name="lng" placeholder="Lontigute"
+            [(ngModel)]="cityForm.lng">
+        </div>
+        <button (click)="searchCity()" class="botao">Buscar</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+
+<ng-template #noDataCity>
+  <div>
+    <p>Vamos buscar uma nova cidade ou relembre uma que salvou aqui!</p>
+  </div>
+</ng-template>

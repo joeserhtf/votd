@@ -1,0 +1,38 @@
+table  {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+thead {
+  text-transform: uppercase;
+}
+
+th {
+  font-weight: 500;
+  color: rgb(9, 42, 112);
+  padding: .25rem;
+  border-bottom: 2px solid rgb(36, 47, 114);
+  text-align: left;
+}
+
+tr {
+  padding: 1em;
+}
+
+td {
+  padding: .5rem;
+  color: darkGrey;
+}
+
+.botao-delete {
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 10px;
+  align-self: end;
+}
+
+img {
+  width: 18px;
+}

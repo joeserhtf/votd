@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Cidade</th>
+      <th>Data</th>
+      <th>Genero</th>
+      <th>Temperatura</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let city of savedCities; index as i">
+      <td>{{city.city}} - {{city.state}}</td>
+      <td>{{city.date}}</td>
+      <td>{{city.genrer}}</td>
+      <td>{{city.temperature}} °C</td>
+      <td>
+        <button (click)="deleteCity(i)" class="botao-delete">
+          <img src="/assets/delete.png" alt="Excluir">
+        </button>
+        <button (click)="selectCity(i)"  class="botao-delete">
+          <img src="/assets/list.png" alt="Listar">
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
