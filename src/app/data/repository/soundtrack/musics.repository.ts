@@ -10,12 +10,14 @@ export class MusicsRepository {
 
   private API = "https://spotify23.p.rapidapi.com/search/";
 
+  private key = ""
+
   constructor(private http: HttpClient) { }
 
   fetchTracksByGenrer(genrer: string): Observable<Musics> {
     return this.http.get<Musics>(`${this.API}?q=${genrer}&type=tracks&offset=${this.randomIntFromInterval(0, 100)}&limit=16&numberOfTopResults=5`, {
       headers: {
-        "X-RapidAPI-Key": "e5b20e38f9msh333d862df21ba21p126b30jsna96071052a1c",
+        "X-RapidAPI-Key": this.key,
         "X-RapidAPI-Host": "spotify23.p.rapidapi.com"
       }
     });
